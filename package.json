@@ -46,8 +46,7 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "push": "gh-pages -d public -r https://github.com/ShawonAshraf/ShawonAshraf.github.io -b master",
-    "deploy": "gatsby build && echo shawonashraf.me > public/CNAME && yarn run push",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "deploy": "gatsby build && yarn run push"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",

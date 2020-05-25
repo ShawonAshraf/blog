@@ -46,7 +46,7 @@ $$
 
 ### Effect of central tendency on feature scaling
 
-When you're about to normalize your dataset, your goal should be to centre your data as much as you can around the central tendency. Take a look at this illustration or a Normal / Gaussian Distribution
+When you normalize your data, your goal should be to centre your data as much as you can around the central tendency. Take a look at this illustration or a Normal / Gaussian Distribution
 
 ![Dan Kernler (2014), A visual representation of the Empricial(68-95-99.7) Rule based on the normal distribution, Wikipedia](./normal.png)
 
@@ -54,9 +54,9 @@ At the centre you have the mean and the distribution is spread at the range of 3
 
 ### So which one then
 
-Now, what form of central tendency to choose while scaling features? It depends entirely on your data! Just because you can normalize data doesn't mean that every dataset out there will play nice with the normal distribution. Some datasets can be erratic by nature and may not adhere to normal distribution at all. In such cases you've to carefully study your data and decide on which one to choose. You can also go on a trial and error fest to check which form or central tendency gives you better results.
+There's no definite answer. It all depends on the nature of your data (type of data, distribution among key things to consider). If you happen to have a lot of nominal or categorical data, then  central tendency can't really help you because nominal data doesn't have any numerical significance. 
 
-[N.B. - how to normalize a dataset or showing some fancy python code wasn't the intent of this post. You can just use equations from a Statistics book or use wonderful mathematical or machine learning libraries out there do ease your job. Code isn't always important. Knowing what to use when is.]
+For Ordinal data (frequency, degree etc.) you can opt for the mood in most cases, even median may work. In case you have ratio/interval scale data, either mean or median will work. Regardless it is always better to check how your data is distributed before picking a method to get central tendency. 
 
 ### References
 
@@ -65,3 +65,4 @@ Now, what form of central tendency to choose while scaling features? It depends 
 3. [Ever Wondered Why Normal Distribution Is So Important?](https://medium.com/fintechexplained/ever-wondered-why-normal-distribution-is-so-important-110a482abee3)
 4. [Foundations of Statistical Natural Language Processing, Manning, Schuetze](https://mitpress.mit.edu/books/foundations-statistical-natural-language-processing)
 5. [Khan Academy Statistics playlist on YouTube](https://www.youtube.com/playlist?list=PL4C863861E3B2E380)
+6. [NOMINAL, ORDINAL, INTERVAL, RATIO SCALES WITH EXAMPLES](https://www.questionpro.com/blog/nominal-ordinal-interval-ratio/)

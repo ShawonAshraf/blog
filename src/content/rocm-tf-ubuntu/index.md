@@ -7,7 +7,7 @@ If you've been working with **Tensorflow** for some time now and extensively use
 
 ### ROCm
 
-I'll keep it brief here since discussing on ROCm isn't the intent of this article and I don't want to open up a large can of worms. In short, ROCm is AMD's answer to Nvidia's **CUDA**. Thanks to this, you can now easily use various GPU dependent computation libraries and softwares with AMD GPUs which could previously be used with Nvidia GPUs only. You can read more about it [here on their official page](https://rocm.github.io).
+I'll keep it brief here since discussing on ROCm isn't the intent of this article and I don't want to open up a large can of worms. In short, ROCm is AMD's answer to Nvidia's **CUDA**. Thanks to this, you can now easily use various GPU dependent computation libraries and software with AMD GPUs which could previously be used with Nvidia GPUs only. You can read more about it [here on their official page](https://rocm.github.io).
 
 ### GPU support
 

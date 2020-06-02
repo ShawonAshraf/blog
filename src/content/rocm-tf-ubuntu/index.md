@@ -1,5 +1,5 @@
 ---
-title: Setting up your AMD GPU for Tensorflow in Ubuntu 18.04
+title: Setting up your AMD GPU for Tensorflow in Ubuntu (Updated for 20.04)
 date: '2020-03-12'
 ---
 
@@ -57,6 +57,34 @@ echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | su
 
 ```bash
 sudo usermod -a -G video $LOGNAME
+sudo usermod -a -G render $LOGNAME
+```
+
+- Open `/etc/adduser.conf` and add these lines
+
+```bash
+sudo nano /etc/adduser.conf
+```
+
+```bash
+ADD_EXTRA_GROUPS=1
+EXTRA_GROUPS="render,video"
+```
+
+- Open `/etc/udev/rules.d/70-kfd.rules` and add the following
+
+```bash
+sudo nano /etc/udev/rules.d/70-kfd.rules
+```
+
+```bash
+SUBSYSTEM=="kfd", KERNEL=="kfd", TAG+="uaccess", GROUP="video"
+```
+
+- Install `libtinfo5`
+
+```bash
+sudo apt install libtinfo5
 ```
 
 - Add ROCm binaries to your path (bash or zsh whichever you use)
@@ -68,147 +96,8 @@ echo 'export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bi
 - Test if your installation was successful or not. If your installation was successful, you should be able to see the supported GPUs installed on your system in the output.
 
 ```bash
-/opt/rocm/bin/rocminfo
-
-# you should see something like this
-ROCk module is loaded
-shawon is member of video group
-=====================
-HSA System Attributes
-=====================
-Runtime Version:         1.1
-System Timestamp Freq.:  1000.000000MHz
-Sig. Max Wait Duration:  18446744073709551615 (0xFFFFFFFFFFFFFFFF) (timestamp count)
-Machine Model:           LARGE
-System Endianness:       LITTLE
-
-==========
-HSA Agents
-==========
-*******
-Agent 1
-*******
-  Name:                    Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz
-  Marketing Name:          Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz
-  Vendor Name:             CPU
-  Feature:                 None specified
-  Profile:                 FULL_PROFILE
-  Float Round Mode:        NEAR
-  Max Queue Number:        0(0x0)
-  Queue Min Size:          0(0x0)
-  Queue Max Size:          0(0x0)
-  Queue Type:              MULTI
-  Node:                    0
-  Device Type:             CPU
-  Cache Info:
-    L1:                      32768(0x8000) KB
-  Chip ID:                 0(0x0)
-  Cacheline Size:          64(0x40)
-  Max Clock Freq. (MHz):   3600
-  BDFID:                   0
-  Internal Node ID:        0
-  Compute Unit:            12
-  SIMDs per CU:            0
-  Shader Engines:          0
-  Shader Arrs. per Eng.:   0
-  WatchPts on Addr. Ranges:1
-  Features:                None
-  Pool Info:
-    Pool 1
-      Segment:                 GLOBAL; FLAGS: KERNARG, FINE GRAINED
-      Size:                    32805216(0x1f49160) KB
-      Allocatable:             TRUE
-      Alloc Granule:           4KB
-      Alloc Alignment:         4KB
-      Acessible by all:        TRUE
-    Pool 2
-      Segment:                 GLOBAL; FLAGS: COARSE GRAINED
-      Size:                    32805216(0x1f49160) KB
-      Allocatable:             TRUE
-      Alloc Granule:           4KB
-      Alloc Alignment:         4KB
-      Acessible by all:        TRUE
-  ISA Info:
-    N/A
-*******
-Agent 2
-*******
-  Name:                    gfx906
-  Marketing Name:          Vega 20
-  Vendor Name:             AMD
-  Feature:                 KERNEL_DISPATCH
-  Profile:                 BASE_PROFILE
-  Float Round Mode:        NEAR
-  Max Queue Number:        128(0x80)
-  Queue Min Size:          4096(0x1000)
-  Queue Max Size:          131072(0x20000)
-  Queue Type:              MULTI
-  Node:                    1
-  Device Type:             GPU
-  Cache Info:
-    L1:                      16(0x10) KB
-  Chip ID:                 26287(0x66af)
-  Cacheline Size:          64(0x40)
-  Max Clock Freq. (MHz):   1801
-  BDFID:                   1280
-  Internal Node ID:        1
-  Compute Unit:            60
-  SIMDs per CU:            4
-  Shader Engines:          4
-  Shader Arrs. per Eng.:   1
-  WatchPts on Addr. Ranges:4
-  Features:                KERNEL_DISPATCH
-  Fast F16 Operation:      FALSE
-  Wavefront Size:          64(0x40)
-  Workgroup Max Size:      1024(0x400)
-  Workgroup Max Size per Dimension:
-    x                        1024(0x400)
-    y                        1024(0x400)
-    z                        1024(0x400)
-  Max Waves Per CU:        40(0x28)
-  Max Work-item Per CU:    2560(0xa00)
-  Grid Max Size:           4294967295(0xffffffff)
-  Grid Max Size per Dimension:
-    x                        4294967295(0xffffffff)
-    y                        4294967295(0xffffffff)
-    z                        4294967295(0xffffffff)
-  Max fbarriers/Workgrp:   32
-  Pool Info:
-    Pool 1
-      Segment:                 GLOBAL; FLAGS: COARSE GRAINED
-      Size:                    16760832(0xffc000) KB
-      Allocatable:             TRUE
-      Alloc Granule:           4KB
-      Alloc Alignment:         4KB
-      Acessible by all:        FALSE
-    Pool 2
-      Segment:                 GROUP
-      Size:                    64(0x40) KB
-      Allocatable:             FALSE
-      Alloc Granule:           0KB
-      Alloc Alignment:         0KB
-      Acessible by all:        FALSE
-  ISA Info:
-    ISA 1
-      Name:                    amdgcn-amd-amdhsa--gfx906
-      Machine Models:          HSA_MACHINE_MODEL_LARGE
-      Profiles:                HSA_PROFILE_BASE
-      Default Rounding Mode:   NEAR
-      Default Rounding Mode:   NEAR
-      Fast f16:                TRUE
-      Workgroup Max Size:      1024(0x400)
-      Workgroup Max Size per Dimension:
-        x                        1024(0x400)
-        y                        1024(0x400)
-        z                        1024(0x400)
-      Grid Max Size:           4294967295(0xffffffff)
-      Grid Max Size per Dimension:
-        x                        4294967295(0xffffffff)
-        y                        4294967295(0xffffffff)
-        z                        4294967295(0xffffffff)
-      FBarrier Max Size:       32
-*** Done ***
-
+sudo /opt/rocm/bin/rocminfo
+sudo /opt/rocm/opencl/bin/x86_64/clinfo
 ```
 
 #### Tensorflow
@@ -216,7 +105,7 @@ Agent 2
 - Install the dependency packages
 
 ```bash
-sudo apt install rocm-libs hipcub miopen-hip
+sudo apt install rocm-libs hipcub miopen-hip rccl
 ```
 
 - Create a `virtualenv` using python. (Use python3)
@@ -233,12 +122,6 @@ source env/bin/activate
 
 ```bash
 pip install tensorflow-rocm
-```
-
-- You'll require RCCL libs as the recent versions of ROCm tend to exclude them for mysterious reasons.
-
-```bash
-sudo apt install rccl
 ```
 
 - You're all done now! Time to test this Tensorflow setup with some python code.

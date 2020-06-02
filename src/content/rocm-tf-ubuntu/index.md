@@ -17,7 +17,7 @@ For this setup process I'm using a **Radeon VII GPU**.
 
 ### OS Support
 
-It's Linux only as of now. Even so, AMD has builds for only **Ubuntu, RHEL and CentOS**. As the title says, I'll be setting up ROCm on Ubuntu 18.04.
+It's Linux only as of now. Even so, AMD has builds for only **Ubuntu, RHEL and CentOS**. As the title says, I'll be setting up ROCm on Ubuntu.
 
 ### Setup
 

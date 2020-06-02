@@ -4,6 +4,9 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import media from '../utils/media';
 import Twitter from '../images/social/twitter.svg';
+import Web from '../images/social/web.png';
+import LinkedIn from '../images/social/linkedin.png';
+import GitHub from '../images/social/gh.png';
 
 const Container = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ const TwitterIcon = styled.img`
 const Bio = () => (
   <StaticQuery
     query={bioQuery}
-    render={data => {
+    render={(data) => {
       const { author, authorTagline, social } = data.site.siteMetadata;
       return (
         <Container>
@@ -63,6 +66,30 @@ const Bio = () => (
               rel="noopener noreferrer"
             >
               <TwitterIcon src={Twitter} alt="twitter" />
+            </a>
+
+            <a
+              href={`https://shawonashraf.com/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon src={Web} alt="website" />
+            </a>
+
+            <a
+              href={`https://www.linkedin.com/in/shawon-ashraf-96162763/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon src={LinkedIn} alt="linked_in" />
+            </a>
+
+            <a
+              href={`https://github.com/ShawonAshraf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon src={GitHub} alt="github" />
             </a>
           </TextContainer>
         </Container>

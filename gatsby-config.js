@@ -3,7 +3,7 @@ module.exports = {
     title: `River`,
     description: `I solemnly swear that I'm upto no good`,
     author: `Shawon Ashraf`,
-    authorTagline: 'Swift, Python, Computational Linguistics, 🇧🇩, 🇩🇪',
+    authorTagline: 'Computational Linguistics, Universität Stuttgart',
     social: {
       twitter: `shawon_ashraf`,
     },

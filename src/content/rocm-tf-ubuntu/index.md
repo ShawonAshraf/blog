@@ -90,14 +90,14 @@ sudo apt install libtinfo5
 - Add ROCm binaries to your path (bash or zsh whichever you use)
 
 ```bash
-echo 'export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin/x86_64' | sudo tee -a /etc/profile.d/rocm.sh
+echo 'export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin/' | sudo tee -a /etc/profile.d/rocm.sh
 ```
 
 - Test if your installation was successful or not. If your installation was successful, you should be able to see the supported GPUs installed on your system in the output.
 
 ```bash
 sudo /opt/rocm/bin/rocminfo
-sudo /opt/rocm/opencl/bin/x86_64/clinfo
+sudo /opt/rocm/opencl/bin/clinfo
 ```
 
 #### Tensorflow
@@ -105,7 +105,16 @@ sudo /opt/rocm/opencl/bin/x86_64/clinfo
 - Install the dependency packages
 
 ```bash
-sudo apt install rocm-libs hipcub miopen-hip rccl
+sudo apt install rocm-libs hipcub miopen-hip
+```
+
+- Install `rccl` from source. The apt package no longer works.
+
+```bash
+sudo apt install cmake
+git clone git@github.com:ROCmSoftwarePlatform/rccl.git
+cd rccl
+sudo ./install.sh -i
 ```
 
 - Create a `virtualenv` using python. (Use python3)

@@ -92,6 +92,14 @@ const Bio = () => (
               <TwitterIcon src={GitHub} alt="github" />
             </a>
           </TextContainer>
+          <a href="https://dev.to/shawonashraf">
+            <img
+              src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+              alt="Shawon Ashraf's DEV Profile"
+              height="50"
+              width="50"
+            />
+          </a>
         </Container>
       );
     }}

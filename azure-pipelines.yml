@@ -18,4 +18,4 @@ steps:
 - script: |
     yarn install
     yarn run depazure
-  displayName: 'install and build'
+  displayName: 'install and build and deploy'

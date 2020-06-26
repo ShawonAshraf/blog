@@ -47,7 +47,7 @@
     "start": "yarn run develop",
     "push": "gh-pages -d public -r https://github.com/ShawonAshraf/ShawonAshraf.github.io -b master",
     "deploy": "gatsby build && yarn run push",
-    "depazure": "gatsby build && gh-pages -d public -r https://$GH_PUBLISH_TOKEN@github.com/ShawonAshraf/ShawonAshraf.github.io -b master"
+    "depazure": "gatsby build && gh-pages -d public -r https://GH_PUBLISH_TOKEN@github.com/ShawonAshraf/ShawonAshraf.github.io -b master"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",

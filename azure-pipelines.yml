@@ -17,5 +17,5 @@ steps:
 
 - script: |
     yarn install
-    yarn run depazure
+    yarn run build && gh-pages -d public -r https://$GH_PUBLISH_TOKEN@github.com/ShawonAshraf/ShawonAshraf.github.io -b master
   displayName: 'install and build and deploy'

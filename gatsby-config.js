@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `River`,
+    title: `Freiheit`,
     description: `I solemnly swear that I'm upto no good`,
     author: `Shawon Ashraf`,
     authorTagline: 'Computational Linguistics, Universität Stuttgart',

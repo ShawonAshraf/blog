@@ -46,7 +46,8 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "push": "gh-pages -d public -r https://github.com/ShawonAshraf/ShawonAshraf.github.io -b master",
-    "deploy": "gatsby build && yarn run push"
+    "deploy": "gatsby build && yarn run push",
+    "depazure": "gastby build && gh-pages -d public -r https://$GH_PUBLISH_TOKEN@github.com/ShawonAshraf/ShawonAshraf.github.io -b master
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -68,9 +69,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShawonAshraf/blog-v3"
+    "url": "https://github.com/ShawonAshraf/blog"
   },
   "bugs": {
-    "url": "https://github.com/ShawonAshraf/blog-v3/issues"
+    "url": "https://github.com/ShawonAshraf/blog/issues"
   }
 }

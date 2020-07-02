@@ -18,4 +18,5 @@ steps:
 - script: |
     yarn install
     yarn run build
+    yarn run depazure
   displayName: 'install and build'

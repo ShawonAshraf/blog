@@ -54,7 +54,6 @@ export const Container = styled.article`
   .remark-sticky-table {
     border-radius: 2px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-    height: 300px;
     margin: 48px 0px;
   }
 

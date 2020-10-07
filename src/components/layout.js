@@ -48,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   code {
-    font-family: Menlo,Monaco,"Courier New",Courier,monospace;
+    font-family: "Fira Code",Menlo,Monaco,"Courier New",Courier,monospace;
     word-break: break-word;
   }
 
@@ -92,7 +92,7 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => (
+        render={(data) => (
           <>
             <Header title={data.site.siteMetadata.title} />
             <Content>{children}</Content>

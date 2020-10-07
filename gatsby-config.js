@@ -29,6 +29,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `@pauliescanlon/gatsby-remark-sticky-table`,
           {
             resolve: `gatsby-remark-images`,
             options: {

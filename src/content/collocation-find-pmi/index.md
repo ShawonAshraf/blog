@@ -199,13 +199,11 @@ pmi for sunflower seed = 7.853815306997303
 
 ### Part - 10 : Checking for other query bigrams
 
-```bash
-| x         | y     |   C(x) |   C(y) |   C(x, y) |       P(x) |        P(y) |     P(x, y) |     PMI |
-|-----------+-------+--------+--------+-----------+------------+-------------+-------------+---------|
-| sunflower | seed  |     37 |     24 |         6 | 0.00108073 | 0.000701016 | 0.000175259 | 7.85382 |
-| sunflower | oil   |     37 |     37 |         1 | 0.00108073 | 0.00108073  | 2.92099e-05 | 4.64436 |
-| sunflower | field |     37 |      1 |         0 | 0.00108073 | 2.9209e-05  | 0           | 0       |
-```
+| x         | y     | C(x) | C(y) | C(x, y) | P(x)       | P(y)        | P(x, y)     | PMI     |
+| --------- | ----- | ---- | ---- | ------- | ---------- | ----------- | ----------- | ------- |
+| sunflower | seed  | 37   | 24   | 6       | 0.00108073 | 0.000701016 | 0.000175259 | 7.85382 |
+| sunflower | oil   | 37   | 37   | 1       | 0.00108073 | 0.00108073  | 2.92099e-05 | 4.64436 |
+| sunflower | field | 37   | 1    | 0       | 0.00108073 | 2.9209e-05  | 0           | 0       |
 
 **The higher the PMI score, the more likely it is for a combination to have a collocation. However, in case the PMI is 0, there's no collocation.**
 
@@ -294,7 +292,7 @@ print(tabulate(results, headers=[
 
 ## Limitations of PMI
 
-Despite doing our job, PMI has its weaknesses. It's prone to frequency bias and will weight lower or 0 frequency terms more over higher frequency terms. This may result in wrong collocation relation. One way to fix this is to apply `Laplace Smoothing`  or use another technique called `Chi Square` 
+Despite doing our job, PMI has its weaknesses. It's prone to frequency bias and will weight lower or 0 frequency terms more over higher frequency terms. This may result in wrong collocation relation. One way to fix this is to apply `Laplace Smoothing` or use another technique called `Chi Square`
 
 > But there is evidence that sparseness is a particularly difficult problem for mutual information. To see why, notice that mutual information is a log likelihood ratio of the probability of the bigram P(w1w2) and the product of the probabilities of the individual words P(w1)P(w2). Consider two extreme cases: perfect dependence of the occurrences of the two words (they only occur together) and perfect independence (the occurrence of one does not give us any information about the occurrence of the other). - Manning, Christopher
 

@@ -78,6 +78,9 @@ export const Container = styled.article`
   .remark-sticky-table-td {
     padding: 16px;
   }
+
+  --deckgo-highlight-code-font-family: 'Fira Code', 'Dank Mono',
+    'Jetbrains Mono', monospace;
 `;
 
 export const Header = styled.header`

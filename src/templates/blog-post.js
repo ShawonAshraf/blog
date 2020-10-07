@@ -5,6 +5,10 @@ import Layout from '../components/layout';
 import { Container, Title, LinkList, Header } from './post-styles';
 import Share from '../components/share';
 
+// for code highlighting
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;

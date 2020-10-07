@@ -46,6 +46,10 @@ export const Container = styled.article`
     height: 1rem;
     padding: 0;
   }
+
+  .gatsby-resp-image-figcaption {
+    text-align: center;
+  }
 `;
 
 export const Header = styled.header`

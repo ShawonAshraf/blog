@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  FacebookShareButton,
-  FacebookIcon,
   TwitterIcon,
   TwitterShareButton,
   EmailShareButton,
@@ -49,13 +47,6 @@ class Share extends Component {
         </p>
         {url && (
           <>
-            <FacebookShareButton
-              url={url}
-              quote={`Read ${post.title} by ${post.author}`}
-              className="social-icon"
-            >
-              <FacebookIcon size={32} round />
-            </FacebookShareButton>
             <TwitterShareButton
               url={url}
               title={`Read ${post.title} by ${post.author}`}

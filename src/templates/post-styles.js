@@ -79,7 +79,7 @@ export const Container = styled.article`
   }
 
   --deckgo-highlight-code-font-family: 'Fira Code', 'Dank Mono',
-    'Jetbrains Mono', monospace;
+    'Jetbrains Mono', Menlo, Monaco, monospace;
 `;
 
 export const Header = styled.header`

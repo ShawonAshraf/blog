@@ -14523,10 +14523,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-oswald@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-oswald/-/typeface-oswald-0.0.54.tgz#1e253011622cdd50f580c04e7d625e7f449763d7"
-  integrity sha512-U1WMNp4qfy4/3khIfHMVAIKnNu941MXUfs3+H9R8PFgnoz42Hh9pboSFztWr86zut0eXC8byalmVhfkiKON/8Q==
+typeface-fira-code@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-fira-code/-/typeface-fira-code-1.1.13.tgz#0179d220382297a50ea29cabae5c4f61bf6208c3"
+  integrity sha512-8TRlYeIGAqwNajMHB3eSFs58VVfKsAsA0JRVu7z895s/FBl3nrh4PCvbH8tqxadU0UXEbCxNBvZtXn/Jpt7C3Q==
+
+typeface-piazzolla@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-piazzolla/-/typeface-piazzolla-1.1.13.tgz#cd4a358379f477a6395382389781dfc6abf424f4"
+  integrity sha512-v6THn4SFENdYokgm5nLKNUrgoroncJMozHQzGCUrK2iQG8OYDm3INvxC21U0+O5LJmAd8q3/nMoeoAOAogqPLw==
 
 unbzip2-stream@^1.0.9:
   version "1.4.3"

@@ -15,7 +15,7 @@ export const Container = styled.article`
 
   blockquote {
     margin-left: 0.25rem;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     color: inherit;
     font-style: italic;
     border-left: 0.2rem solid rgb(0, 0, 0);

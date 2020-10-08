@@ -34,7 +34,7 @@ const Name = styled.h3`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-family: 'system', 'Helvetica';
+  font-family: 'Piazzolla', 'system', 'Helvetica';
 `;
 
 const TagLine = styled.sub`

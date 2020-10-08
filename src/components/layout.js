@@ -8,7 +8,7 @@ import media from '../utils/media';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: system;
+    font-family: 'Piazzolla', Helvetica, Arial, system;
     font-style: normal;
     font-weight: 300;
     src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'system', 'Helvetica';
+    font-family: 'Piazzolla', 'Helvetica', 'system';
     margin: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Piazzolla', sans-serif;
   }
 
   h2 {
@@ -58,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
 
   :not(pre) > code[class*="language-"], pre[class*="language-text"] {
     background-color: transparent;
+    font-family: 'Fira Code';
     color: inherit;
     font-size: medium;
   }

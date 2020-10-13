@@ -136,3 +136,5 @@ Yes yes. I know. I'll discuss Neural Language Models in the next part of this po
 - [Wikipedia article on Additive smoothing](https://en.wikipedia.org/wiki/Additive_smoothing)
 - [Jurafsky, Martin. Speech and Language Processing (3rd ed. draft)](https://web.stanford.edu/~jurafsky/slp3/)
 - [Manning, Christopher. Foundations of Statistical Natural Language Processing (The MIT Press)](https://nlp.stanford.edu/fsnlp/)
+
+You can also read this post on [Medium](https://medium.com/@shawonashraf/index-48563e4c1572).

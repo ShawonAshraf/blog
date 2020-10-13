@@ -76,13 +76,13 @@ If you look at the equation above we're only considering a **combination of two 
 Let's say we stick to our approach and use bigrams and check for the previous word only. Then the equation for the language model for any sentence, $s$ with $n$ words would be -
 
 $$
-P(w | s) = \prod_{t = 1}^{n} P(w_{i} | w_{i - 1})
+P(w | s) = \prod_{i = 1}^{n} P(w_{i} | w_{i - 1})
 $$
 
 Now what if we wanted to go for a Trigram? Then we'd have checked for the previous two words instead of one.
 
 $$
-P(w | s) = \prod_{t = 1}^{n} P(w_{i} | w_{i - 1}, w_{i - 2})
+P(w | s) = \prod_{i = 1}^{n} P(w_{i} | w_{i - 1}, w_{i - 2})
 $$
 
 ## Wait, how to get a value for that probability?

@@ -69,7 +69,7 @@ Markov Models state that the next element in a sequence is based on what came be
 
 ## n-grams
 
-If you look at the equation above we're only considering a **combination of two words**. For example $\text{burger} | \text{ate}$. A combination of two words like this is called a **Bigram**. Had we considered three words, it'd be called a **Trigram**. Four ? Tetragram and so on. Hence this approach is called **n-grams**. Like window size, the number of grams will also have an effect on the probability if you're using a Markov Model.
+If you look at the equation above we're only considering a **combination of two words**. For example $\text{burger} | \text{ate}$. A combination of two words like this is called a **Bigram**. Had we considered three words, it'd be called a **Trigram**. Four ? Tetragram and so on. Hence this approach is called **n-grams**. Like window size, the number of grams will also have an effect on the probability if you're using a Markov Model. And I added BEGIN and END to the sentence so that words which begin and end the sentences can be tried in a n-gram against these markers.
 
 ## What about other sentences?
 

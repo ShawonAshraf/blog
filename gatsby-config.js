@@ -7,6 +7,7 @@ module.exports = {
     social: {
       twitter: `shawon_ashraf`,
     },
+    siteUrl: `https://shawonashraf.github.io/`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -83,5 +84,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-feed`,
   ],
 };

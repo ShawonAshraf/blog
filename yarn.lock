@@ -993,10 +993,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@deckdeckgo/highlight-code@^2.1.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@deckdeckgo/highlight-code/-/highlight-code-2.2.1.tgz#93aaddd5745dd936800479b880f50f5220167f1a"
-  integrity sha512-58pTwLeq7WiqBePOCWmjD7QkC0hkJph1xzcaOBqIBntS/YuPrP4JXgwdiNwzd4rwmS+U4nUJJrLZ1eZD0/iUQQ==
+"@deckdeckgo/highlight-code@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@deckdeckgo/highlight-code/-/highlight-code-2.2.2.tgz#508056d4f7b01a62cd121c62a9e3d2ed5e947dcf"
+  integrity sha512-9ei5OLkDk0hJDexdrbWerLiUcnhRA+1P8A57iwkNNzduefdw7QtD+36u0/FJjjmKW/DvIB42O/83uu9C0uMFpg==
   dependencies:
     "@deckdeckgo/utils" "1.3.0"
     prismjs "^1.21.0"

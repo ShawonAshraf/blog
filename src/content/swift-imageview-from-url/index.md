@@ -7,7 +7,7 @@ date: '2019-08-20'
 
 You're writing the front-end of a fancy website. You have to load images from a remote server and you have the url. What do you do? You take sip from your cup of coffee, grin and pull some HTML trickery. Just like this -
 
-```html
+```bash
 <img src="some_url" alt="some_image" />
 ```
 

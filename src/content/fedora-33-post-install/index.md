@@ -1,6 +1,6 @@
 ---
 title: Fedora 33 post installation steps
-date: '2020-10-14'
+date: '2021-02-23'
 ---
 
 I recently installed Fedora on my workstation to make my home and lab computers consistent with each other. This is a simple post installation guide I followed. If you plan to use Fedora sometime in the future, check it out.
